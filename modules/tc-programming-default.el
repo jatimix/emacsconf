@@ -17,30 +17,28 @@
 (global-flycheck-mode +1)
 (add-hook 'prog-mode-hook 'flycheck-mode)
 
-;; disable annoying blink-matching-paren
-(setq blink-matching-paren nil)
-
 ;; smart pairing for all
-(require 'smartparens-config)
-(setq sp-base-key-bindings 'paredit)
-(setq sp-autoskip-closing-pair 'always)
-(setq sp-hybrid-kill-entire-symbol nil)
-(sp-use-paredit-bindings)
+;; (require 'smartparens-config)
+;; (setq sp-base-key-bindings 'paredit)
+;; (setq sp-autoskip-closing-pair 'always)
+;; (setq sp-hybrid-kill-entire-symbol nil)
+;; (sp-use-paredit-bindings)
+;; (smartparens-global-mode t)
+;; (show-smartparens-global-mode +1)
 
-(show-smartparens-global-mode +1)
+;;(diminish 'smartparens-global-mode)
 
 (require 'compile)
 (setq compilation-ask-about-save nil  ; Just save before compiling
       compilation-always-kill t       ; Just kill old compile processes before
 					; starting the new one
       compilation-scroll-output 'first-error ; Automatically scroll to first
-                                             ; error
+                                        ; error
       )
 
 
 ;; permet d'expand des regions (lettre -> mot -> paragraphe)
 (require 'expand-region)
-;;; TODO (dans un file separer) (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; .zsh file is shell script too
 (add-to-list 'auto-mode-alist '("\\.zsh\\'" . shell-script-mode))
@@ -49,6 +47,11 @@
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
 
+;; evite les lignes inutiles a la fin d'un fichier
+(setq next-line-add-newlines nil)
+
+;; enable hide show mode only for prog mode
+(add-hook 'prog-mode-hook 'hs-minor-mode)
 
 (provide 'tc-programming-default.el)
 ;;; tc-programming-default.el ends here

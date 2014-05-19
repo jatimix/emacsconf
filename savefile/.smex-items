@@ -1,0 +1,20 @@
+
+;; ----- smex-history -----
+(
+ helm-M-x
+ helm-mode
+ helm-mini
+ dired
+ cd
+ df
+ 5x5
+)
+
+;; ----- smex-data -----
+(
+ (helm-M-x . 2)
+ (dired . 1)
+ (helm-mini . 2)
+ (helm-mode . 1)
+ (flycheck-describe-checker . 1)
+)

@@ -8,6 +8,10 @@
 ;;; Commentary: none
 ;;; code:
 
+(require 'helm)
+
+(helm-mode 1)
+
 (provide 'tc-helm)
 
 ;;; tc-helm.el ends here

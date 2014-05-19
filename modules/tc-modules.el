@@ -8,13 +8,20 @@
 ;;; Commentary: none
 ;;; code:
 
-(load "tc-ido.el")
-(load "tc-cmode.el")
-(load "tc-ruby.el")
-(load "tc-web-mode.el")
-(load "tc-helm.el")
-;;(load "tc-projectile.el")
-(load "tc-programming-default.el")
+(load "tc-editor")                   ;; editor specific conf
+(load "tc-programming-default")      ;; prog mode specific
+(load "tc-ido")
+(load "tc-company")
+(load "tc-cmode")
+(load "tc-ruby")
+(load "tc-web-mode")
+(load "tc-helm")
+(load "tc-elisp")
+(load "tc-projectile")
+(load "tc-auto-insert")
+(load "tc-smart-beginning-of-line")
+(load "tc-global-set-key")
+(load "tc-customs")
 
 (provide 'tc-modules)
 ;;; tc-modules ends here

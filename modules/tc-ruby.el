@@ -16,11 +16,16 @@
 
 ;; We never want to edit Rubinius bytecode
 (add-to-list 'completion-ignored-extensions ".rbc")
+(inf-ruby-minor-mode +1)
 
-;; (inf-ruby-minor-mode +1)
-;; (ruby-tools-mode +1)
+;; must add pry and pry-doc to gemfile for this to work.. no workaround
+(add-hook 'ruby-mode-hook 'robe-mode)
 
+;; set flycheck rubocop special parser (need gem install rubocop to use it)
+;(flycheck-select-checker ruby-rubocop)
 
+;; slim-mode (auto via el-get)
+;;(require 'slim-mode)
 
 (provide 'tc-ruby)
 
