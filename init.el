@@ -61,5 +61,7 @@
  '(flycheck-color-mode-line-info-face ((t (:inherit flycheck-fringe-info :background "deep sky blue" :weight normal))))
  '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :background "yellow" :weight normal)))))
 
+(put 'dired-find-alternate-file 'disabled nil)
+
 (provide 'init)
 ;;; init.el ends here
