@@ -68,6 +68,7 @@
    powerline                            ; vim looking mode line
    flycheck-color-mode-line             ; for highligh mode ligne
    move-text                            ; check M-up M-down
+   git-gutter-fringe                    ; + or - when adding smth
    ))
 
 (el-get 'sync my:el-get-packages)
@@ -79,6 +80,7 @@
 (defvar my-melpa-packages '(robe ;; some enhancement for ruby (get def, symbol etc)
 flx-ido ;; fix for ido
 company-inf-ruby ;; backend for ruby for company
+;company-c-headers ;;enable c header completion
 )
   "A list of packages to ensure are installed at launch.")
 

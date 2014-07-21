@@ -53,5 +53,14 @@
 ;; enable hide show mode only for prog mode
 (add-hook 'prog-mode-hook 'hs-minor-mode)
 
+;; enable git gutter
+(require 'git-gutter-fringe)
+(global-git-gutter-mode +1)
+(setq-default left-fringe-width  7)
+(diminish 'git-gutter-mode)
+
+;; gdb stuff
+(setq gdb-many-windows +1)
+
 (provide 'tc-programming-default.el)
 ;;; tc-programming-default.el ends here

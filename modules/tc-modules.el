@@ -19,6 +19,7 @@
 (load "tc-elisp")
 (load "tc-projectile")
 (load "tc-auto-insert")
+(load "tc-yasnippet")
 (load "tc-smart-beginning-of-line")
 (load "tc-global-set-key")
 (load "tc-customs")

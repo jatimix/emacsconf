@@ -8,6 +8,8 @@
 ;;; Commentary: none
 ;;; code:
 
+ (load-library "iso-transl")
+
 (defvar current-user
   (getenv
    (if (equal system-type 'windows-nt) "USERNAME" "USER")))
@@ -61,7 +63,6 @@
  '(flycheck-color-mode-line-info-face ((t (:inherit flycheck-fringe-info :background "deep sky blue" :weight normal))))
  '(flycheck-color-mode-line-warning-face ((t (:inherit flycheck-fringe-warning :background "yellow" :weight normal)))))
 
-(put 'dired-find-alternate-file 'disabled nil)
-
 (provide 'init)
 ;;; init.el ends here
+(put 'dired-find-alternate-file 'disabled nil)

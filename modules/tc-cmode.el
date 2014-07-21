@@ -8,5 +8,8 @@
 ;;; Commentary: none
 ;;; code:
 
+ (setq c-default-style "linux"
+       c-basic-offset 4)
+
 ;; (provide 'tc-cmode)
 ;;;tc-cmode.el ends here
